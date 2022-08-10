@@ -1,1 +1,0 @@
-# lingkes.github.io
