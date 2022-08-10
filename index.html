@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pr econnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
+    <title>Lingkes | Nur Fahri</title>
+</head>
+
+<body>
+    <body id="body">
+        <section class="profile">
+          <img
+            class="profile__image"
+            src="https://avatars.githubusercontent.com/u/88620605?v=4"
+            alt="Nur Fahri"
+            width="100%"
+          />
+          <div class="profile__bio">
+            <h3 class="profile__bio__name">Nur Fahri</h3>
+            <p class="profile__bio__title">Web and Design Enthusiast</p>
+          </div>
+        </section>      
+        <section class="socials">
+            <a
+            class="socials__link"
+            href="https://instagram.com/nurfah1"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.icons8.com/material-outlined/96/FFFFFF/instagram-new--v1.png"
+              class="socials__link__icon"
+          /></a>
+          <a
+            class="socials__link"
+            href="https://dribbble.com/NurFahri"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.icons8.com/nolan/344/FFFFFF/dribbble.png"
+              class="socials__link__icon"
+          /></a>
+          <a
+            class="socials__link"
+            href="https://www.linkedin.com/in/nurfahri/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.icons8.com/nolan/344/FFFFFF/linkedin.png"
+              class="socials__link__icon"
+            />
+          </a>
+          <a
+            class="socials__link"
+            href="https://www.kodekulaku.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://img.icons8.com/nolan/344/FFFFFF/chrome.png"
+              class="socials__link__icon"
+          /></a>
+        </section>
+
+
+        <!-- Featured -->
+    <div class="title">
+        <h2>Featured</h2>
+    </div>
+
+    <div class="card-container">
+      <a href="#">
+        <div class="card-1">
+            <div class="card-image-1">
+                <img src="images/Logo Lingkes 2.png" alt="images"/>
+            </div>
+            <div class="card-text-1">
+                <h2>Lingkes</h2>
+                <p>Link for Links. Add all your links and Use it everywhere in simple link.</p>
+            </div>
+        </div>
+      </a>
+    <!-- End of Featured -->
+
+    <!-- Important Link -->
+    <div class="title">
+        <h2>Important Link</h2>
+    </div>
+    <div class="section-links">
+        <div class="link new-link">
+            <a href="https://github.com/features/copilot" target="_blank"> 
+                <p class="link-title">GitHub Copilot</p>
+                <p class="link-description">Don't fly solo</p>
+            </a>
+        </div>
+    </div>
+    <!-- End of Additional Link -->
+
+     <!-- Portfolio -->
+     <div class="title">
+        <h2>Portofolio</h2>
+    </div>
+
+    <div class="img-slider">
+      <a href="https://dribbble.com/NurFahri" target="_blank">
+        <div class="slide active">
+          <img src="images/thumbdesign.png" alt="">
+          <div class="info"> 
+            <h2>Portofolio Design</h2> <!-- Slide1 --> 
+            <p>Design project yang telah dikerjakan.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.kodekulaku.com/" target="_blank">
+        <div class="slide">
+          <img src="images/thumbweb.png" alt="">
+          <div class="info">
+            <h2>Kodekulaku Project</h2> <!-- Slide2 -->
+            <p>Wujudkan Kebutuhan Webmu.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/k8FbaCzQJ60" target="_blank">
+        <div class="slide">
+          <img src="images/thumbgame.png" alt="">
+          <div class="info">
+            <h2>Gaming Project</h2> <!-- Slide3 -->
+            <p>Esport Team dan Event Organizer untuk Esport.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="slide">
+          <img src="images/cvthumb.png" alt="">
+          <div class="info">
+            <h2>Curriculum Vitae</h2> <!-- Slide4 -->
+            <p>CV / Resume dari Nur Fahri</p>
+          </div>
+        </div>
+      </a>
+
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+  
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 4000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+    <!-- End of Portfolio -->
+
+
+    <div class="title">
+        <h2>Support Me</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="content">
+          <img src="https://images.unsplash.com/photo-1526401281623-279b498f10f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80">
+          <h4>Makasih yaa udah support</h4>
+          <a href="https://saweria.co/mitsurichan" target="_blank">
+            <button class="buy-2">Traktir Fahri Beli Kopi</button>
+          </a>
+        </div>  
+      </div>
+
+</body>
+</html>
